@@ -92,6 +92,21 @@ imap.once('end', function() {
 imap.connect();
 ```
 
+* An IMAP username prefix could be added in initiation object, like this :
+
+```javascript
+var imap = new Imap({
+  user: 'mygmailname@gmail.com',
+  password: 'mygmailpassword',
+  host: 'imap.gmail.com',
+  port: 993,
+  tls: true,
+  prefix : '__webmail__'
+});
+
+```
+
+
 * Retrieve the 'from' header and buffer the entire body of the newest message:
 
 ```javascript
